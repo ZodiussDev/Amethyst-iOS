@@ -30,6 +30,11 @@ jobs:
           java-version: '8'
           distribution: 'zulu'
 
+      - name: Link Java 8 for java_home
+        run: |
+          sudo mkdir -p /Library/Java/JavaVirtualMachines/
+          sudo ln -sf $JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk
+
       - name: Remove work folders
         run: |
           echo "before"
