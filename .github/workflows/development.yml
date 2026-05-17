@@ -18,9 +18,12 @@ jobs:
         include:
           - platform: 2
             platform_name: ios
-    
+            
     runs-on: macos-latest
     steps:
+      - name: Install dependencies
+        run: brew install make
+
       - name: Remove work folders
         run: |
           echo "before"
