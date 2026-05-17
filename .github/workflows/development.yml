@@ -22,8 +22,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Install dependencies
-        run: brew install make
-        
+        run: brew install make cmake ldid wget
+
       - name: Set up JDK 8
         uses: actions/setup-java@v4
         with:
